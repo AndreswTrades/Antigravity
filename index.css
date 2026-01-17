@@ -40,7 +40,7 @@ body::before {
         url('trading_background_premium.png');
     background-size: cover;
     background-position: center;
-    animation: backgroundPan 25s ease-in-out infinite alternate;
+    animation: backgroundPan 15s ease-in-out infinite alternate;
 }
 
 @keyframes backgroundPan {
