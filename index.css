@@ -17,6 +17,8 @@
 
 body {
     background-color: var(--bg-color);
+    position: relative;
+    overflow-x: hidden;
     color: var(--text-primary);
     font-family: var(--font-main);
     display: flex;
@@ -24,63 +26,61 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 40px 20px;
-    background: radial-gradient(circle at top right, #1e1b4b, #0d0d0d);
 }
 
-.container {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 600px;
-    text-align: center;
+    height: 100%;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(13, 13, 13, 0.75), rgba(13, 13, 13, 0.75)),
+        url('trading_background_premium.png');
+    background-size: cover;
+    background-position: center;
+    animation: backgroundPan 20s ease-in-out infinite alternate;
 }
 
-header {
-    margin-bottom: 40px;
-    animation: fadeInDown 0.8s ease-out;
-}
+@keyframes backgroundPan {
+    0% {
+        transform: scale(1);
+        background-position: center;
+    }
 
-.avatar {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    background: var(--accent) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-}
-
-.bio {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    font-weight: 300;
-}
-
-#links-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    100% {
+        transform: scale(1.1);
+        background-position: top right;
+    }
 }
 
 .link-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
-    padding: 16px 20px;
+    padding: 18px 25px;
     border-radius: 16px;
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.link-card i {
+    font-size: 1.4rem;
+    width: 25px;
+    text-align: center;
+    background: var(--accent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .link-card:hover {
@@ -103,17 +103,42 @@ footer {
 
 /* Animations */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* staggered animations for links */
-.link-card:nth-child(1) { animation-delay: 0.1s; }
-.link-card:nth-child(2) { animation-delay: 0.2s; }
-.link-card:nth-child(3) { animation-delay: 0.3s; }
-.link-card:nth-child(4) { animation-delay: 0.4s; }
+.link-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.link-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.link-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.link-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
