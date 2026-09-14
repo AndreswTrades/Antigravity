@@ -360,3 +360,20 @@ footer {
 .link-card:nth-child(3) {
     animation-delay: 0.3s;
 }
+
+.link-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* --- Kick (main link) --- */
+
+.link-card-kick {
+    border: 1px solid rgba(83, 252, 24, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 18px rgba(83, 252, 24, 0.15);
+}
+
+.link-card-kick:hover {
+    background: rgba(83, 252, 24, 0.14);
+    border-color: rgba(83, 252, 24, 0.7);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 34px rgba(83, 252, 24, 0.35);
+}
