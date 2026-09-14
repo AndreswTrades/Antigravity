@@ -377,3 +377,42 @@ footer {
     border-color: rgba(83, 252, 24, 0.7);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 34px rgba(83, 252, 24, 0.35);
 }
+
+/* --- Discord --- */
+
+.link-card-discord {
+    border: 1px solid rgba(88, 101, 242, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 18px rgba(88, 101, 242, 0.15);
+}
+
+.link-card-discord:hover {
+    background: rgba(88, 101, 242, 0.14);
+    border-color: rgba(88, 101, 242, 0.7);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 34px rgba(88, 101, 242, 0.35);
+}
+
+/* --- Whop --- */
+
+.link-card-whop {
+    border: 1px solid rgba(250, 70, 22, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 18px rgba(250, 70, 22, 0.15);
+}
+
+.link-card-whop:hover {
+    background: rgba(250, 70, 22, 0.14);
+    border-color: rgba(250, 70, 22, 0.7);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 34px rgba(250, 70, 22, 0.35);
+}
+
+/* --- YouTube --- */
+
+.link-card-youtube {
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 18px rgba(255, 0, 0, 0.15);
+}
+
+.link-card-youtube:hover {
+    background: rgba(255, 0, 0, 0.14);
+    border-color: rgba(255, 0, 0, 0.7);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 34px rgba(255, 0, 0, 0.35);
+}
